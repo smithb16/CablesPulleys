@@ -1,0 +1,46 @@
+\chapter{Conclusion}
+
+Congratulations! You've now made a cable-pulley system, controlled its
+dimensions in ways that are meaningful, and made it progressively more complex.
+We invested a fair bit of effort on the front end of this design (e.g. using 3-D
+sketches rather than 2-D sketches) to enable feature re-use down the line.
+
+This progression, from planar pulleys, to tilted pulleys, to pulleys with fleet
+angle, is one I commonly go through in the course of my designs. If I'm lucky, I
+can eventually progress back to planar pulleys, which among other things keeps
+the machinists happy.
+
+There are a few CAD methods used in this tutorial that I'd like to call out once
+more.
+
+\begin{enumerate}
+\item{} By deleting relations rather than deleting sketch entities, we can avoid
+rebuilding the Feature Tree.
+\item{} The more I design, the more I separate sketches that define geometry from
+sketches that are used in features. I do this for two reasons:
+
+
+\begin{itemize}
+\item{} These geometry sketches won't be absorbed into the features, making them
+  easier to find and modify later.
+\item{} Multiple features are influenced by a system's geometry. For instance, the
+  cable diameter affects both the cable sweep and the pulley revolve. It is
+  best to define these dimensions in a single location, so that when they
+  change (and they inevitably will), you only have to change them in one
+  place.
+\end{itemize}
+\item{} Using 3D sketches requires a few unintuitive techniques, but you should be
+able to constrain them in any way you can imagine. Don't be afraid to make
+copious use of \kode{Planes}. They can easily be deleted later if they're not
+useful.
+\item{} CAD the cables. You'll thank yourself later.
+\end{enumerate}
+
+I hope this tutorial shortens your learning curve. Please reach out to me if you
+have feedback or questions. Godspeed!
+
+\hfill\break
+
+-- Ben Smith
+
+February 2022

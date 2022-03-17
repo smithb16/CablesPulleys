@@ -1,0 +1,34 @@
+% Place additional custom commands below.
+% NOTE: These commands will generally be available across output formats.
+% For commands (such as hyphenation) that only pertain to PDF output, use the
+% file `custom_pdf.sty` instead.
+
+% Examples:
+%   No arguments:
+%     Insert '\emph{The Ruby on Rails Tutorial}' wherever '\tutorial' occurs:
+%
+% \newcommand{\tutorial}{\emph{The Ruby on Rails Tutorial}}
+%
+%   One argument:
+%     Convert '\bfi{text}' to '\textbf{\textit{text}}' (boldface italic):
+%
+% \newcommand{\bfi}[1]{\textbf{\textit{{#1}}}}
+
+% Include a command for the sake of the test suite.
+\newcommand{\softcover}{\texttt{softcover}}
+
+% Include custom math example.
+\newcommand{\unitvec}[1]{\ensuremath{\hat #1}}
+
+% Make a single-line tabular relation
+\newcommand{\relation}[1]{
+  \kode{#1}~\includegraphics[height=1.4\fontcharht\font`\B]{images/symbols/#1.png}
+}
+
+\newcommand{\xrelation}[1]{
+  \sout{\kode{#1}}~\includegraphics[height=1.4\fontcharht\font`\B]{images/symbols/#1.png}
+}
+
+\newcommand{\cadsymbol}[1]{
+  \includegraphics[height=1.4\fontcharht\font`\B]{images/symbols/#1.png}
+}
