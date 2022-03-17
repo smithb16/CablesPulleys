@@ -1,72 +1,4 @@
-\chapter{Building our 3D Sketch}
-
-Every time I design a cable and pulley system, I struggle through the same
-questions. How does a 3D sketch work? Do I need a 3D sketch? Should I make the cables first or the pulleys first?
-
-Sometimes I decide ``I don't actually need to CAD the cables.'' Time saved by
-not cadding the cables is dwarfed by the time spent modifying hardware later, say
-when the cables run directly through another part.
-
-\section{Our Notation}
-
-Throughout this tutorial, we'll use the following notation:
-
-\begin{itemize}
-\item{} \emph{Italics} is used to denote sketch and feature names, such as \emph{Line 1} and
-  \emph{Pulley 1}. While SolidWorks may apply a name like ``Line1@Sketch2'', we'll ignore those names and rename them ourselves.
-\item{} \kode{Green code} is used to notate SolidWorks features that you should click, such as \relation{Extrude}, \relation{Circle}, and \relation{Concentric}.
-\item{} \texttt{Typewriter text} is used to denote keystrokes, such as \texttt{Tab}
-  and \texttt{R}. Here, \texttt{R} refers to pressing the \texttt{R} key alone,
-  not in a capitalized form.
-
-\texttt{Shift+R} refers to ``Hold \texttt{Shift} and press \texttt{R}''.
-\item{} Constraints will be described as below, which reads ``Add a
-    \relation{Coincident}
-  relation between \emph{Line 1} and \emph{Line 2}.''
-\end{itemize}
-
-\begin{center}
-\begin{tabular}{ccc}
-  \hline
-  \relation{Coincident} & \emph{Line 1} & \emph{Line 2} \\
-  \hline
-\end{tabular}
-\end{center}
-
-\begin{itemize}
-  \item{} Removing constraints will be described as below, which reads ``Remove
-    the existing \relation{Coincident} relation between \emph{Line 1} and
-    \emph{Line 2}.''
-\end{itemize}
-
-\begin{center}
-\begin{tabular}{ccc}
-  \hline
-  \xrelation{Coincident} & \emph{\sout{Line 1}} & \emph{\sout{Line 2}} \\
-  \hline
-\end{tabular}
-\end{center}
-
-\subsection{Modifying the Pace}
-
-\label{sec:modifying_the_pace}
-This tutorial is designed for those with basic SolidWorks skills. I only explain
-the concepts relevant to 3D sketches and the relevant features. For those who
-find the pace too slow, each section is summarized with a \textbf{Section Recap}.
-These steps, along with the images and a few mental leaps, should keep the pace
-appropriate.
-
-\subsection{Overview}
-
-\label{sec:overview}
-
-In this tutorial, we'll make a pulley/cable system, utilizing SolidWorks 3D
-sketching capabilities. We will start by sketching a system of planar pulleys (Section~\ref{sec:planar-pulleys}), turning our
-sketches into a multi-body part (Section~\ref{sec:making_solid_bodies}). We will
-then progressively make the system more complicated, moving the system off the
-cardinal plane (Section~\ref{sec:non_orthogonal_pulleys}) and making the cables non-tangential to the pulleys (Section~\ref{sec:non-tangential-pulleys}).
-
-\section{Planar Pulleys and Cables}
+\chapter{Planar Pulleys and Cables}
 
 \label{sec:planar-pulleys}
 
@@ -100,7 +32,7 @@ this file. I used the name "Cable Pulley System - Rev 0", so that if I later
 revise it, I don't have to get too creative in renaming the file. This
 will be our working part for the remainder of the tutorial.
 
-\subsection{Making Line 1}
+\section{Making Line 1}
 
 \label{sec:making_line_1}
 
@@ -165,7 +97,7 @@ names instead. \label{fig:labeled-sketch}}
 \item{} Dimension \emph{Line 1} to 1'' long.
 \end{enumerate}
 
-\subsection{Making Circle 1}
+\section{Making Circle 1}
 
 \label{sec:making-circle-1}
 Still working in the 3D Sketch but now on the Y-Z Plane, add a \relation{Circle}, which we'll
@@ -213,7 +145,7 @@ Circle 1 is now fully constrained.
   Plane}.
 \end{enumerate}
 
-\subsection{Making Circle 2}
+\section{Making Circle 2}
 
 Create another \kode{Circle} and constrain it as follows:
 
@@ -240,7 +172,7 @@ here is academic. As sketches get more complicated, it can be a lifesaver.
 \item{} Position \emph{Circle 2} with the \relation{Triad}, just for practice.
 \end{enumerate}
 
-\subsection{Making Line 2 and Line 3}
+\section{Making Line 2 and Line 3}
 
 Add a \relation{Line} (\emph{Line 2}) connecting \emph{Circle 1} and \emph{Circle 2}. Constrain
 it as follows, confirming that the tangent relations snap to the correct side of
@@ -273,7 +205,7 @@ parallel to \emph{Line 1}. Constrain it as follows:
 \end{tabular}
 \end{center}
 
-\subsection{Constraining the 3D Sketch}
+\section{Constraining the 3D Sketch}
 
 Moving \emph{Circle 2} with the \kode{Triad} shows us that we are missing two
 constraints, as in Figure~\ref{fig:unconstrained-entities}.
